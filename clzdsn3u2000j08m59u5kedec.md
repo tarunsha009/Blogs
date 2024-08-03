@@ -82,7 +82,7 @@ tags: interview, python, sorting, oops, coding-best-practices, custom-comparison
     * Certain data structures like `heapq` and `SortedSet` require elements to be orderable.
         
     
-    **Example with** `heapq`:
+    **Example with**`heapq`:
     
     ```python
     import heapq
@@ -197,7 +197,7 @@ Once you define custom comparison methods in your class, you can override the de
     
 * When you override comparison methods in a custom class, Python's built-in functions like `sorted()` and `list.sort()` will use those custom methods to determine the order of the objects.
     
-    * **Using** `sorted()` with Custom Objects:
+    * **Using**`sorted()` with Custom Objects:
         
         * When you use the `sorted()` function on a list of objects of your class, Python will use the `__lt__` method to compare the objects and determine their order.
             
@@ -205,13 +205,13 @@ Once you define custom comparison methods in your class, you can override the de
         **Example:**
         
         ```python
-        pythonCopy coderectangles = [Rectangle(4, 5), Rectangle(3, 6), Rectangle(2, 7)]
+        rectangles = [Rectangle(4, 5), Rectangle(3, 6), Rectangle(2, 7)]
         sorted_rectangles = sorted(rectangles)
         ```
         
         * Python calls the `__lt__` method for comparisons between the `Rectangle` objects in the list to sort them by their area.
             
-    * **Using** `list.sort()` with Custom Objects:
+    * **Using**`list.sort()` with Custom Objects:
         
         * Similarly, if you use the `list.sort()` method on a list of custom objects, it will also use the `__lt__` method (or other comparison methods if defined) to sort the list.
             
@@ -219,7 +219,7 @@ Once you define custom comparison methods in your class, you can override the de
         **Example:**
         
         ```python
-        pythonCopy coderectangles = [Rectangle(4, 5), Rectangle(3, 6), Rectangle(2, 7)]
+        rectangles = [Rectangle(4, 5), Rectangle(3, 6), Rectangle(2, 7)]
         rectangles.sort()
         ```
         
@@ -231,7 +231,7 @@ Once you define custom comparison methods in your class, you can override the de
 #### Example: Custom Comparison in a `Rectangle` Class
 
 ```python
-pythonCopy codeclass Rectangle:
+class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -284,11 +284,11 @@ print(r1 >= r2)  # True
 
 ### Practice Questions
 
-1. **Implement a** `Book` class where books are compared based on their `title` and `author`. Include all comparison methods.
+1. **Implement a**`Book` class where books are compared based on their `title` and `author`. Include all comparison methods.
     
-2. **Define a** `Person` class where persons are compared based on their `age`. Implement comparison methods for equality, less than, and greater than.
+2. **Define a**`Person` class where persons are compared based on their `age`. Implement comparison methods for equality, less than, and greater than.
     
-3. **Implement a** `Point3D` class for 3D points and include methods to compare points based on their distance from the origin.
+3. **Implement a**`Point3D` class for 3D points and include methods to compare points based on their distance from the origin.
     
 
 ### **Summary**
